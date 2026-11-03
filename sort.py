@@ -36,21 +36,19 @@ sortv = nesort
 sortv = []
 #начинаем цикл итераций
 while len(nesort) > 0:
-    min = nesort[0]
+    max = nesort[0]
     for i in range(0, len(nesort)):
-        if nesort[i] < min:
-            min = nesort[i]
-    sortv.append(min)
-    nesort.remove(min)
+        if nesort[i] > max:
+            max = nesort[i]
+    sortv.append(max)
+    nesort.remove(max)
     #прибавлем в счетчик одну итерацию
     c=c+1
     #выводим промежуточное значение списка при выборке
     print(sortv)
 
-#выводим список сортированный пузырьком
+#выводим список 
 print("сортированный пузырьком список",sort)
-#выводим список сортированный выборкой
-print("сортированный выборкой список",sortv)
 #выводим кол-во сравнений пузырька
 print("кол-во сравнений пузырька",b)
 #выводим кол-во сравнений выборки
